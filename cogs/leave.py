@@ -8,7 +8,7 @@ class leave(commands.Cog):
         self.client = client
 
     
-    @commands.command(pass_context=True, aliases=['j', 'joi'])
+    @commands.command(pass_context=True, aliases=['l', 'lea'])
     async def leave(self, ctx):
         channel = ctx.message.author.voice.channel
         voice = get(self.client.voice_clients, guild=ctx.guild)
