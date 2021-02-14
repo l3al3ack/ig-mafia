@@ -21,38 +21,6 @@ client.remove_command("announce")
 async def on_ready():
     print("the bot is online")
 
-@client.command(pass_context=True, aliases=['j', 'joi'])
-async def join(ctx):
-    channel = ctx.message.author.voice.channel
-    voice = get(client.voice_clients, guild=ctx.guild)
-
-    if voice and voice.is_connected():
-        await voice.move_to(channel)
-    else:
-        voice = await channel.connect()
-
-    await voice.disconnect()
-
-    if voice and voice.is_connected():
-        await voice.move_to(channel)
-    else:
-        voice = await channel.connect()
-        print(f"The bot has connected to {channel}\n")
-
-    await ctx.send(f"Joined {channel}")
-
-@client.command(pass_context=True, aliases=['l', 'lea'])
-async def leave(ctx):
-    channel = ctx.message.author.voice.channel
-    voice = get(client.voice_clients, guild=ctx.guild)
-
-    if voice and voice.is_connected():
-        await voice.disconnect()
-        print(f"The bot has left {channel}")
-        await ctx.send(f"Left {channel}")
-    else:
-        print("Bot was told to leave voice channel, but was not in one")
-        await ctx.send("Don't think I am in a voice channel")
 
 @client.command()
 async def load(ctx, extension):

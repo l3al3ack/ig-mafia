@@ -14,19 +14,13 @@ class join(commands.Cog):
         voice = get(self.client.voice_clients, guild=ctx.guild)
 
         if voice and voice.is_connected():
-            await voice.move_to(channel)
+            await voice.disconnect()
+            print(f"The bot has left {channel}")
+            await ctx.send(f"Left {channel}")
         else:
-            voice = await channel.connect()
-
-        await voice.disconnect()
-
-        if voice and voice.is_connected():
-            await voice.move_to(channel)
-        else:
-            voice = await channel.connect()
-            print(f"The bot has connected to {channel}\n")
-
-        await ctx.send(f"Joined {channel}")
+            print("Bot was told to leave voice channel, but was not in one")
+            await ctx.send("Don't think I am in a voice channel")
+        
 
 
 def setup(client):
