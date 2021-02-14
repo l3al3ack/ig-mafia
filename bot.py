@@ -8,7 +8,7 @@ from discord.ext.commands import has_permissions
 import time
 from datetime import datetime
 import random
-
+from discord.utils import get
 
 intents = discord.Intents.default()
 # we need members intent too
