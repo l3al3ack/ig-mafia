@@ -16,7 +16,7 @@ class join(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(join(client))
+    client.add_cog(leave(client))
 
 
 
