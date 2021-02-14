@@ -54,7 +54,7 @@ async def leave(ctx):
         print("Bot was told to leave voice channel, but was not in one")
         await ctx.send("Don't think I am in a voice channel")
 
-        
+
 @client.command()
 async def load(ctx, extension):
     client.load_extension(f'cogs.{extension}')
