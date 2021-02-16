@@ -84,7 +84,7 @@ async def mafia(ctx,*,message):
     embed.set_footer(text="Iranian Group", icon_url="https://cdn.discordapp.com/emojis/802808293734744104.gif?v=1")
     embed.set_image(url="https://cdn.discordapp.com/attachments/791275795037028363/802808734220943370/623e1dc4b844631e7ac54f459bffb6e8.jpg")
     embed.set_thumbnail(url="https://media.discordapp.net/attachments/788352938769907742/789092949177925642/240_F_122808000_C8VABpdNryTGS8Mip4iQ0LxpC2pvOtvQ.jpg")    
-    embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/791275795037028363/795613597564272660/image.gif")
+    embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/784388493647544328/811235662891188224/image_7.gif")
     embed.timestamp = datetime.utcnow()
     
     await ctx.send(embed=embed)
