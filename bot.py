@@ -75,8 +75,6 @@ for filename in os.listdir('./cogs'):
 
 
 
-
-
 @client.command(pass_context=True)  
 @commands.has_permissions(manage_messages=True)  
 async def mafia(ctx,*,message):  
